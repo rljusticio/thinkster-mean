@@ -1,0 +1,15 @@
+Before beginning work on any project, it's usually a good idea to know what you're building.
+-Below is a basic list of things we want our users to be able to do:
+  -Create new posts
+  -View all posts ordered by upvotes
+  -Add comments about a given post
+  -View comments for a given post
+  -Upvote posts and comments
+
+Steps
+-start with the Angular side of things
+-AngularJS is a frontend framework developed by Google with the goal of making single page web applications easier to build, test, and maintain
+
+1. Create two empty files called index.html (for writing the template) and app.js (for defining our AngularJS logic)
+
+2.
