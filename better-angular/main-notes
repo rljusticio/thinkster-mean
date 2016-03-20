@@ -1,0 +1,10 @@
+Kicking the Tires
+-angular is not a library
+-it is a JavaScript framework that embraces extending HTML into a more expressive and readable format
+
+-allows us to decorate our HTML with special markup that synchronizes with our JavaScript leaving us to write our application logic instead of manually updating views
+  -see ./ang-overview
+
+A First Example: Data-Binding
+-build a form to calculate the cost of an invoice in different currencies
+-see ./ang-overview/data-binding.html

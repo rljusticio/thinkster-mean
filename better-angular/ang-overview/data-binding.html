@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Data-Binding</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <!-- build a form to calculate the costs of an invoice in different currencies -->
+
+    <!--
+      In Angular, a file like this is called a template
+
+      When Angular starts your application, it parses and processes this new markup from the template using the compiler
+
+      The loaded, transformed and rendered DOM is then called the view
+
+      The first kind of new markup are the directives.
+
+      They apply special behavior to attributes or elements in the HTML.
+
+      We use the ng-app attribute, which is linked to a directive that automatically initializes our application
+    -->
+    <div ng-app ng-init="qty=1;cost=2">
+      <b>Invoice:</b>
+      <div>
+        <!-- The ng-model directive stores/updates the value of the input field into/from a variable -->
+        Quantity: <input type="number" min="0" ng-model="qty">
+      </div>
+      <div>
+        Costs: <input type="number" min="0" ng-model="cost">
+      </div>
+      <div>
+        <b>Total:</b> {{qty * cost | currency}}
+      </div>
+    </div>
+  </body>
+</html>
