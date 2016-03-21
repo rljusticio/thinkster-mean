@@ -32,4 +32,5 @@ Registering services
   -Note that you are not registering a service instance, but rather a factory function that will create this instance when called.
 
 Dependencies
--
+-Services can have their own dependencies.
+  -Just like declaring dependencies in a controller, you declare dependencies by specifying them in the service's factory function signature.

@@ -29,6 +29,22 @@
         Costs: <input type="number" min="0" ng-model="cost">
       </div>
       <div>
+        <!--
+          When the compiler encounters this markup, it will replace it with the evaluated value of the markup.
+
+          An expression in a template is a JavaScript-like code snippet that allows Angular to read and write variables.
+
+          Note that those variables are not global variables.
+
+          Just like variables in a JavaScript function live in a scope,
+          Angular provides a scope for the variables accessible to expressions
+        -->
+
+        <!--
+          A filter formats the value of an expression for display to the user.
+
+          The filter currency formats a number into an output that looks like money
+        -->
         <b>Total:</b> {{qty * cost | currency}}
       </div>
     </div>

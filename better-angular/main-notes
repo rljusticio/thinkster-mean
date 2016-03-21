@@ -1,5 +1,5 @@
 Kicking the Tires
--angular is not a library
+-Angular is not a library
 -it is a JavaScript framework that embraces extending HTML into a more expressive and readable format
 
 -allows us to decorate our HTML with special markup that synchronizes with our JavaScript leaving us to write our application logic instead of manually updating views
@@ -8,3 +8,24 @@ Kicking the Tires
 A First Example: Data-Binding
 -build a form to calculate the cost of an invoice in different currencies
 -see ./ang-overview/data-binding.html
+  -In Angular, a file like this is called a template.
+  -When Angular starts your application, it parses and processes this new markup from the template using the compiler. -The loaded, transformed and rendered DOM is then called the view.
+
+  -The first kind of new markup are the directives. They apply special behavior to attributes or elements in the HTML
+
+  Custom directives to access the DOM
+  -In Angular, the only place where an application should access the DOM is within directives.
+  -This is important because artifacts that access the DOM are hard to test.
+  -If you need to access the DOM directly you should write a custom directive for this.
+    -The directives guide explains how to do this.
+
+  -An expression in a template is a JavaScript-like code snippet that allows Angular to read and write variables.
+  -Note that those variables are not global variables.
+  -Just like variables in a JavaScript function live in a scope, Angular provides a scope for the variables accessible to expressions
+    -The values that are stored in variables on the scope are referred to as the model in the rest of the documentation
+
+  -Angular provides live bindings
+    -Whenever the input values change, the value of the expressions are automatically recalculated and the DOM is updated with their values.
+    -The concept behind this is two-way data binding
+
+Adding UI Logic: Controllers

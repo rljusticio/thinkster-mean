@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Data-Binding</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js" charset="utf-8"></script>
+    <script src="invoice.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <!-- added an ng-controller directive to the HTML -->
+    <!-- This directive tells Angular that the new InvoiceController is responsible for the element with the directive and all of the element's children -->
+    <!-- InvoiceController as invoice tells Angular to instantiate the controller and save it in the variable invoice in the current scope -->
+    <!-- all expressions in the page read and write to variables within the controller instance by prefixing them with invoice-->
+    <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
+      <b>Invoice:</b>
+      <div>
+        Quantity: <input type="number" min="0" ng-model="invoice.qty" required >
+      </div>
+      <div>
+        Costs: <input type="number" min="0" ng-model="invoice.cost" required >
+        <select ng-model="invoice.inCurr">
+          <!-- possible currencies are defined in the controller and added to the template using ng-repeat -->
+          <option ng-repeat="c in invoice.currencies">{{c}}</option>
+        </select>
+      </div>
+      <div>
+        <b>Total:</b>
+        <span ng-repeat="c in invoice.currencies">
+          <!-- possible currencies are defined in the controller and added to the template using ng-repeat -->
+          <!-- controller contains a total function, and we are also able to bind the result of that function to the DOM -->
+          {{invoice.total(c) | currency: c}}
+        </span>
+        <!-- the button to pay the invoice uses the directive ngClick. This will evaluate the corresponding expression whenever the button is clicked.-->
+        <button class="btn" ng-click="invoice.pay()">Pay</button>
+      </div>
+    </div>
+  </body>
+</html>
