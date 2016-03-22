@@ -35,3 +35,20 @@ View-Independent business logic: Services
 -Right now, the InvoiceController contains all logic of our example.
 -When the application grows it is a good practice to move view-independent logic from the controller into a service, so it can be reused by other parts of the application as well.
 -see invoice2.js
+
+-moved the convertCurrency function and the definition of the existing currencies into the new file finance.js.
+
+-how does the controller get a hold of the now separated function?
+  -This is where Dependency Injection comes into play.
+  -Dependency Injection (DI) is a software design pattern that deals with how objects and functions get created and how they get a hold of their dependencies
+
+  -To use DI, there needs to be a place where all the things that should work together are registered.
+    -In Angular, this is the purpose of the modules
+    -When Angular starts, it will use the configuration of the module with the name defined by the ng-app directive, including the configuration of all modules that this module depends on
+
+  -How does the InvoiceController get a reference to the currencyConverter function?
+    -this is done by simply defining arguments on the constructor function
+    -then the injector is able to create the objects in the right order and pass the previously created objects into the factories of the objects that depend on them
+
+Accessing the Back-End
+-

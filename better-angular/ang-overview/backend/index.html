@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title>Invoice2</title>
+    <title>Accessing the Backend</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js" charset="utf-8"></script>
-    <script src="invoice2.js" charset="utf-8"></script>
-    <script src="finance.js" charset="utf-8"></script>
+    <script src="invoice3.js" charset="utf-8"></script>
+    <script src="finance3.js" charset="utf-8"></script>
   </head>
   <body>
-    <div ng-app="invoice2" ng-controller="InvoiceController as invoice">
+    <div ng-app="invoice3" ng-controller="InvoiceController as invoice">
       <b>Invoice:</b>
       <div>
         Quantity: <input type="number" min="0" ng-model="invoice.qty" required >
       </div>
       <div>
-        Costs: <input type="number" min="0" ng-model="invoice.cost" required >
+        Costs: <input type="number" min="0" ng-model="invoice.cost" reuired >
         <select ng-model="invoice.inCurr">
           <option ng-repeat="c in invoice.currencies">{{c}}</option>
         </select>
