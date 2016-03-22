@@ -29,3 +29,9 @@ A First Example: Data-Binding
     -The concept behind this is two-way data binding
 
 Adding UI Logic: Controllers
+-see invoice.js and invoice.html
+
+View-Independent business logic: Services
+-Right now, the InvoiceController contains all logic of our example.
+-When the application grows it is a good practice to move view-independent logic from the controller into a service, so it can be reused by other parts of the application as well.
+-see invoice2.js
