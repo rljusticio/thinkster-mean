@@ -52,4 +52,17 @@ The Zen of Angular
 -make common tasks trivial and difficult tasks possible
 
 -Angular frees us from the following concerns
-  -
+  -Registering callbacks
+    -Removing common boilerplate code such as callbacks is a good thing. It vastly reduces the amount of JavaScript coding you have to do, and it makes it easier to see what your application does
+
+  -Manipulating HTML DOM programmatically
+    -By declaratively describing how the UI should change as your application state changes, you are freed from low-level DOM manipulation tasks.
+      -Most applications written with Angular never have to programmatically manipulate the DOM
+
+  -Marshaling data to and from the UI
+    -CRUD operations make up the majority of AJAX applications' tasks
+    -code describes the overall flow of the application rather than all of the implementation details
+
+  -Writing tons of initialization code just to get started
+    -With Angular you can bootstrap your app easily using services, which are auto-injected into your application in a Guice-like dependency-injection style
+    -
