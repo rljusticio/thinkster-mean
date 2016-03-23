@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Binding</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <style>
+    p{
+      margin-top: 10px;
+    }
+    </style>
+  </head>
+  <body class="container">
+    <!--  The ng-app directive defines where in our page an Angular application is running -->
+    <div ng-app>
+      <!-- As applications get bigger and take longer to render, it's possible that we can see curly brackets in our browser for a split second while Angular is still compiling our templates. We can avoid this flashing behavior by using ng-bind instead of curly brackets -->
+
+      <h1 ng-bind="'Binding ' + message"></h1>
+      <input type="text" ng-model="message">
+      <p ng-bind="message"></p>
+      <p ng-bind="message + message"></p>
+      <p ng-bind="message === 'hello'"></p>
+      <p ng-bind="1 + 2"></p>
+      <!-- The functionality is exactly same as in binding.html, this is just an alternative way of displaying Angular expressions.-->
+      <!-- the downside to ng-bind is that the entire inner text of the element gets replace with what the expression returns, so we had to move the Binding text from our header into the ng-bind expression to get the same results as before -->
+  </body>
+</html>

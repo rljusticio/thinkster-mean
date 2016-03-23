@@ -1,0 +1,2 @@
+-Binding is one of the powerful features of Angular.
+-It allows us to automatically synchronize data between our views and our models and our models, allowing our models to be the "single-source-of-truth" in our application.

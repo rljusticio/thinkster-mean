@@ -65,4 +65,3 @@ The Zen of Angular
 
   -Writing tons of initialization code just to get started
     -With Angular you can bootstrap your app easily using services, which are auto-injected into your application in a Guice-like dependency-injection style
-    -
