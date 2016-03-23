@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Binding</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <style>
+    p{
+      margin-top: 10px;
+    }
+    </style>
+  </head>
+  <body class="container">
+    <!--  The ng-app directive defines where in our page an Angular application is running -->
+    <div ng-app>
+      <!--
+      The final way to bind data is one-time binding. As the name suggests, this means the data is only read once from the source, then the data between the source and the view are no longer synchronized
+
+      This will come in handy as your application grows as it is a much less resource intensive way of displaying static data or data that only needs to be read once
+      -->
+    <h1 ng-bind="'Binding ' + message"></h1>
+
+      <!-- we used the ng-init directive to initialize message with a value of hello -->
+      <!-- ng-init is a directive that evaluates the given expression once when the element is initialized. Note that ng-init shouldn't be used regularly, as you should be initializing your variables in your controllers-->
+      <input type="text" ng-model="message" ng-init="message = 'hello'">
+      <p ng-bind="message"></p>
+      <p ng-bind="message + message"></p>
+      <!-- We can express this by prefixing our variables with :: -->
+      <!-- here we use a one-time binding which made it so once the value in message was compared to hello, that specific expression stopped listening for changes to message, leaving the value of true to stay in that paragraph regardless of what we put into our text input -->
+      <p ng-bind="::message === 'hello'"></p>
+      <p ng-bind="1 + 2"></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <script src="behavior.js" charset="utf-8"></script>
+  </head>
+  <!-- We attach our controller to the DOM using the ng-controller directive -->
+  <body ng-app="myApp" class="container">
+    <!-- The greeting property can now be data-bound to the template -->
+    <div ng-controller="DoubleController" class="row">
+      <!-- Once the Controller has been attached to the DOM, the double method can be invoked in an Angular expression in the template -->
+      Two times <input ng-model="num"> equals {{ double(num) || 0 }}
+    </div>
+  </body>
+</html>
