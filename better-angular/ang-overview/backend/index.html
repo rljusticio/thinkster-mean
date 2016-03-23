@@ -1,7 +1,10 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
     <title>Accessing the Backend</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js" charset="utf-8"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
     <script src="invoice3.js" charset="utf-8"></script>
     <script src="finance3.js" charset="utf-8"></script>
   </head>
@@ -12,7 +15,7 @@
         Quantity: <input type="number" min="0" ng-model="invoice.qty" required >
       </div>
       <div>
-        Costs: <input type="number" min="0" ng-model="invoice.cost" reuired >
+        Costs: <input type="number" min="0" ng-model="invoice.cost" required >
         <select ng-model="invoice.inCurr">
           <option ng-repeat="c in invoice.currencies">{{c}}</option>
         </select>
@@ -20,7 +23,7 @@
       <div>
         <b>Total:</b>
         <span ng-repeat="c in invoice.currencies">
-          {{invoice.total(c) | currency: c}}
+          {{invoice.total(c) | currency:c}}
         </span>
         <button class="btn" ng-click="invoice.pay()">Pay</button>
       </div>
