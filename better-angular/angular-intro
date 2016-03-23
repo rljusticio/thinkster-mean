@@ -1,0 +1,55 @@
+What is Angular?
+-a structural framework for dynamic web apps
+-lets us use html as our template language
+-an ideal partner for any server technology
+
+-library: a collection of functions which are useful when writing web apps.
+  -Your code is in charge and it calls into the library when it sees fit. E.g., jQuery
+
+-framework: a particular implementation of a web application, where your code fills in the details.
+  -The framework is in charge and it calls into your code when it needs something app specific. E.g., durandal, ember, etc.
+
+-Angular attempts to minimize the mismatch between document centric HTML and what an application needs by creating new HTML constructs.
+  -Angular teaches the browser new syntax through a construct we call directives.
+    -Data binding, as in {{}}.
+    -DOM control structures for repeating, showing and hiding DOM fragments.
+    -Support for forms and form validation.
+    -Attaching new behavior to DOM elements, such as DOM event handling.
+    -Grouping of HTML into reusable components.
+
+A complete client-side solution
+-handles all of the DOM and AJAX glue code you once wrote by hand and puts it in a well-defined structure
+-Angular is opinionated about how a CRUD (Create, Read, Update, Delete) application should be built
+
+-Angular comes with the following out-of-the-box:
+  -Everything you need to build a CRUD app in a cohesive set:
+    -Data-binding, basic templating directives, form validation, routing, deep-linking, reusable components and dependency injection.
+  -Testability story: Unit-testing, end-to-end testing, mocks and test harnesses.
+  -Seed application with directory layout and test scripts as a starting point.
+
+Angular's sweet spot
+-not every app is a good fit for Angular.
+-Angular was built with the CRUD application in mind.
+  -Luckily CRUD applications represent the majority of web applications
+
+-Games and GUI editors are examples of applications with intensive and tricky DOM manipulation.
+  -These kinds of apps are different from CRUD apps, and as a result are probably not a good fit for Angular.
+    -In these cases it may be better to use a library with a lower level of abstraction, such as jQuery
+
+The Zen of Angular
+-decouple DOM manipulation from app logic.
+  -This dramatically improves the testability of the code.
+
+-regard app testing as equal in importance to app writing.
+  -Testing difficulty is dramatically affected by the way the code is structured.
+
+-decouple the client side of an app from the server side
+  -allows development work to progress in parallel, and allows for reuse of both sides
+
+-framework should guide developers through the entire journey of building an app
+  -From designing the UI, through writing the business logic, to testing
+
+-make common tasks trivial and difficult tasks possible
+
+-Angular frees us from the following concerns
+  -

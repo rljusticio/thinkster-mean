@@ -1,4 +1,3 @@
-
 angular.module('invoice3', ['finance3'])
   .controller('InvoiceController', ['currencyConverter', function(currencyConverter) {
     this.qty = 1;
