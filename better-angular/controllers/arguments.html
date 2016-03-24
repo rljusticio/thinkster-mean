@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <script src="arguments.js" charset="utf-8"></script>
+  </head>
+  <body ng-app="spicyApp2" class="container">
+    <div ng-controller="SpicyController" class="row">
+      <!--  The template then refers to this Controller method and passes in a string constant 'chili' in the binding for the first button and a model property customSpice (bound to an input box) in the second button -->
+      <input ng-model="customSpice">
+      <button ng-click="spicy('chili')">Chili</button>
+      <button ng-click="spicy(customSpice)">Custom Spice</button>
+      <p>The food is {{ spice }} spicy.</p>
+    </div>
+  </body>
+</html>

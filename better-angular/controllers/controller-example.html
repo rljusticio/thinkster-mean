@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <script src="controller-example.js" charset="utf-8"></script>
+  </head>
+  <body ng-app="spicyApp1" class="container">
+    <!-- The ng-controller directive is used to (implicitly) create a scope for our template -->
+    <!-- scope is augmented (managed) by the SpicyController Controller -->
+    <div ng-controller="SpicyController" class="row">
+      <!-- The Controller methods and properties are available in the template
+      (for both the <div> element and its children) -->
+      <button ng-click="chiliSpicy()">Chili</button>
+      <button ng-click="jalapenoSpicy()">Jalapeno</button>
+      <p>The food is {{ spice }} spicy.</p>
+    </div>
+  </body>
+</html>

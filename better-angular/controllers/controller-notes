@@ -32,3 +32,29 @@ Adding Behavior to a Scope Object
 -We add behavior to the scope by attaching methods to the $scope object.
   -These methods are then available to be called from the template/view.
 -see behavior.html and behavior.js
+
+Using Controllers Correctly
+-a Controller shouldn't try to do too much.
+  -It should contain only the business logic needed for a single view.
+
+-keep controllers slim by encapsulating work that doesn't belong to controllers into services and then using these services in Controllers via dependency injection
+
+Associating Controllers with Angular Scope Objects
+-associate Controllers with scope objects implicitly via the ngController directive or $route service.
+
+Simple Spicy Controller Example
+-To illustrate further how Controller components work in Angular, let's create a little app with the following components:
+  -A template with two buttons and a simple message
+  -A model consisting of a string named spice
+  -A Controller with two functions that set the value of spice
+-see controller-example.js and controller-example.html
+
+Spicy Arguments Example
+-Controller methods can also take arguments
+-see arguments.html and arguments.js
+
+Scope Inheritance Example
+-it is common to attach Controllers at different levels of the DOM hierarchy.
+-Since the ng-controller directive creates a new child scope, we get a hierarchy of scopes that inherit from each other.
+-The $scope that each Controller receives will have access to properties and methods defined by Controllers higher up the hierarchy
+-see inheritance.html and inheritance.js
